@@ -13,7 +13,7 @@ export default function FiberMapFrame() {
         </div>
       )}
       <iframe
-        src="/phoenix_fiber_map_v3.html"
+        src={`${import.meta.env.BASE_URL}phoenix_fiber_map_v3.html`}
         className={styles.iframe}
         style={{ opacity: loaded ? 1 : 0 }}
         onLoad={() => setLoaded(true)}
