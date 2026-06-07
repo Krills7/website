@@ -5,40 +5,22 @@ export default function HeroSection() {
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
-        <p
-          className={styles.greeting}
-          style={{ animationDelay: '0s' }}
-        >
+        <p className={styles.greeting}>
           {profile.greeting}
         </p>
-        <h1
-          className={styles.name}
-          style={{ animationDelay: '0.15s' }}
-        >
+        <h1 className={styles.name}>
           {profile.name}
         </h1>
-        <p
-          className={styles.elevator}
-          style={{ animationDelay: '0.25s' }}
-        >
+        <p className={styles.elevator}>
           {profile.elevator}
         </p>
-        <p
-          className={styles.tagline}
-          style={{ animationDelay: '0.35s' }}
-        >
+        <p className={styles.tagline}>
           {profile.tagline}
         </p>
-        <p
-          className={styles.blurb}
-          style={{ animationDelay: '0.4s' }}
-        >
+        <p className={styles.blurb}>
           {profile.about}
         </p>
-        <div
-          className={styles.ctas}
-          style={{ animationDelay: '0.45s' }}
-        >
+        <div className={styles.ctas}>
           <a href="#projects" className={styles.ctaPrimary}>
             View Projects
           </a>
@@ -46,10 +28,7 @@ export default function HeroSection() {
             Get in Touch
           </a>
         </div>
-        <div
-          className={styles.social}
-          style={{ animationDelay: '0.5s' }}
-        >
+        <div className={styles.social}>
           <a
             href={profile.social.github}
             target="_blank"
