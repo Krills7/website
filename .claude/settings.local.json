@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/david/Projects/Fibermp/**)",
+      "Bash(rg fiber_map_v2\\\\|fiber_map_v3\\\\|phoenix_fiber *)"
+    ]
+  }
+}
