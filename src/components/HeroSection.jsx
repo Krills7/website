@@ -18,20 +18,20 @@ export default function HeroSection() {
           {profile.name}
         </h1>
         <p
-          className={styles.tagline}
-          style={{ animationDelay: '0.3s' }}
-        >
-          {profile.tagline}
-        </p>
-        <p
           className={styles.elevator}
-          style={{ animationDelay: '0.32s' }}
+          style={{ animationDelay: '0.25s' }}
         >
           {profile.elevator}
         </p>
         <p
-          className={styles.blurb}
+          className={styles.tagline}
           style={{ animationDelay: '0.35s' }}
+        >
+          {profile.tagline}
+        </p>
+        <p
+          className={styles.blurb}
+          style={{ animationDelay: '0.4s' }}
         >
           {profile.about}
         </p>
