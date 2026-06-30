@@ -27,22 +27,22 @@
 .dot {
   width: 8px;
   height: 8px;
-  background: var(--accent);
+  background: var(--accent-warm);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent);
+  box-shadow: 0 0 8px rgba(201, 150, 77, 0.5);
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent); }
-  50% { opacity: 0.6; box-shadow: 0 0 16px var(--accent); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(201, 150, 77, 0.5); }
+  50% { opacity: 0.6; box-shadow: 0 0 16px rgba(201, 150, 77, 0.7); }
 }
 
 .name {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
   color: var(--text);
 }
 
@@ -52,9 +52,10 @@
 }
 
 .tab {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   padding: 6px 16px;
   border-radius: var(--radius-sm);
   color: var(--muted);
@@ -67,7 +68,7 @@
 }
 
 .tab.active {
-  color: var(--accent);
+  color: var(--accent-dark);
   background: var(--accent-glow);
 }
 
@@ -76,10 +77,10 @@
     padding: 0 var(--space-md);
   }
   .name {
-    font-size: 12px;
+    font-size: 13px;
   }
   .tab {
-    font-size: 11px;
+    font-size: 12px;
     padding: 6px 10px;
   }
 }

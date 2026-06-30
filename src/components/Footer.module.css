@@ -26,12 +26,13 @@
 
 .link {
   font-size: 12px;
+  font-weight: 500;
   color: var(--muted);
   transition: color var(--transition-fast);
 }
 
 .link:hover {
-  color: var(--accent);
+  color: var(--accent-dark);
 }
 
 @media (max-width: 768px) {

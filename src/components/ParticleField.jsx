@@ -185,7 +185,7 @@ export default function ParticleField() {
             ctx.beginPath()
             ctx.moveTo(a.x, a.y)
             ctx.lineTo(b.x, b.y)
-            ctx.strokeStyle = `rgba(0, 255, 136, ${alpha})`
+            ctx.strokeStyle = `rgba(201, 150, 77, ${alpha})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -197,7 +197,7 @@ export default function ParticleField() {
         const p = particles[i]
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(0, 255, 136, ${p.alpha})`
+        ctx.fillStyle = `rgba(201, 150, 77, ${p.alpha})`
         ctx.fill()
       }
 
@@ -209,7 +209,7 @@ export default function ParticleField() {
         if (dist < width * 2) {
           ctx.beginPath()
           ctx.arc(cursor.x, cursor.y, REPULSION_RADIUS * 0.6, 0, Math.PI * 2)
-          ctx.strokeStyle = 'rgba(0, 255, 136, 0.08)'
+          ctx.strokeStyle = 'rgba(201, 150, 77, 0.10)'
           ctx.lineWidth = 1
           ctx.stroke()
         }
@@ -223,7 +223,7 @@ export default function ParticleField() {
         ctx.beginPath()
         ctx.arc(wave.x, wave.y, wave.radius, 0, Math.PI * 2)
         const alpha = Math.max(0, 1 - wave.radius / wave.maxRadius) * 0.15
-        ctx.strokeStyle = `rgba(0, 255, 136, ${alpha})`
+        ctx.strokeStyle = `rgba(201, 150, 77, ${alpha})`
         ctx.lineWidth = 1
         ctx.stroke()
 

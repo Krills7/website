@@ -83,7 +83,7 @@ export default function CursorGlow() {
           window.innerWidth / 2, window.innerHeight / 2, 0,
           window.innerWidth / 2, window.innerHeight / 2, GLOW_RADIUS
         )
-        grad.addColorStop(0, 'rgba(0, 255, 136, 0.03)')
+        grad.addColorStop(0, 'rgba(201, 150, 77, 0.04)')
         grad.addColorStop(1, 'transparent')
         ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
         ctx.fillStyle = grad
@@ -114,19 +114,19 @@ export default function CursorGlow() {
           const size = 1.5 + proximity * 2
           ctx.beginPath()
           ctx.arc(d.x, d.y, size, 0, Math.PI * 2)
-          ctx.fillStyle = `rgba(0, 255, 136, ${alpha})`
+          ctx.fillStyle = `rgba(201, 150, 77, ${alpha})`
           ctx.fill()
         } else {
           ctx.beginPath()
           ctx.arc(d.x, d.y, 1.5, 0, Math.PI * 2)
-          ctx.fillStyle = 'rgba(139, 148, 158, 0.06)'
+          ctx.fillStyle = 'rgba(139, 115, 85, 0.05)'
           ctx.fill()
         }
       }
 
       // Draw radial glow
       const grad = ctx.createRadialGradient(sx, sy, 0, sx, sy, GLOW_RADIUS)
-      grad.addColorStop(0, 'rgba(0, 255, 136, 0.03)')
+      grad.addColorStop(0, 'rgba(201, 150, 77, 0.04)')
       grad.addColorStop(1, 'transparent')
       ctx.fillStyle = grad
       ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)

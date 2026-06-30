@@ -8,6 +8,7 @@ export default function HeroSection() {
         <p className={styles.greeting}>
           {profile.greeting}
         </p>
+        <span className={styles.flourish} aria-hidden="true">&#x2767;</span>
         <h1 className={styles.name}>
           {profile.name}
         </h1>

@@ -6,8 +6,8 @@
 }
 
 .blurb {
-  background: var(--surface, #161b22);
-  border-bottom: 1px solid var(--border, #21262d);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
   padding: 12px 24px;
   text-align: center;
   flex-shrink: 0;
@@ -16,7 +16,7 @@
 .blurb p {
   margin: 0;
   font-size: 13px;
-  color: var(--muted, #8b949e);
-  font-family: var(--font-mono, 'Space Mono', monospace);
+  color: var(--muted);
+  font-family: var(--font-sans);
   line-height: 1.5;
 }

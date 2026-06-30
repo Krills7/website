@@ -24,21 +24,23 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
-  padding: 8px 20px;
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  padding: 8px 22px;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--accent);
+  letter-spacing: 0.02em;
+  color: var(--accent-dark);
   transition: all var(--transition-fast);
   text-decoration: none;
+  background: transparent;
 }
 
 .link:hover {
   background: var(--accent-glow);
   box-shadow: 0 0 16px var(--accent-glow-strong);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {

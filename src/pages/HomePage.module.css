@@ -4,23 +4,44 @@
   padding: var(--space-3xl) var(--space-lg);
 }
 
+.section:nth-child(even) {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
 .container {
   max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
 .sectionTitle {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
+  letter-spacing: 0.10em;
+  color: var(--accent-dark);
   margin-bottom: var(--space-lg);
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-warm), transparent);
+  border-radius: 1px;
 }
 
 .aboutText {
   font-size: 16px;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.8;
   max-width: 640px;
 }

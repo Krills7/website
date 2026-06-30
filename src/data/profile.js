@@ -1,11 +1,11 @@
 export const profile = {
   name: "David Brimhall",
   tagline: "Software Engineer",
-  greeting: "Hi, I'm",
+  greeting: "Hello there, I'm",
   elevator:
     "Recently graduated software engineer from Arizona State University with hands-on experience in machine learning, full-stack development, and IT systems. I bridge the gap between research and production — from training AI models to managing enterprise infrastructure with Intune and Active Directory. I build tools that solve real problems.",
   about:
-    "Newly graduated software engineer with a passion for building interactive web applications, geospatial tools, and developer tooling. I enjoy crafting polished user experiences and solving problems with clean, maintainable code.",
+    "I'm a freshly graduated software engineer who loves building interactive web applications, geospatial tools, and thoughtful developer tooling. I believe good software feels like a cozy, well-built home — warm, intuitive, and crafted with care.",
   email: "davidbrimhall71@gmail.com",
   social: {
     github: "https://github.com/Krills7",
