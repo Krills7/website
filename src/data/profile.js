@@ -21,6 +21,7 @@ export const profile = {
     { label: 'profile', path: '/profile', file: 'profile.sys' },
     { label: 'work', path: '/work', file: 'work.vol' },
     { label: 'fiber map', path: '/fiber-map', file: 'fiber.gis' },
+    { label: 'postboard', path: '/postboard', file: 'postboard.apk' },
     { label: 'lab', path: '/visual', file: 'particles.exe' },
   ],
   stats: [

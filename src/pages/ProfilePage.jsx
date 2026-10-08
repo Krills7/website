@@ -129,21 +129,6 @@ export default function ProfilePage() {
       </section>
 
       {/* ── workflow (the bottom visual) ─────────────────────── */}
-      <section className={styles.workflowIntro}>
-        <div className="shell">
-          <Reveal as="p" className="eyebrow">
-            03 — workflow.sys
-          </Reveal>
-          <Reveal as="h2" className={styles.sectionTitle} delay={60}>
-            How I get from question to production
-          </Reveal>
-          <Reveal as="p" className={styles.workflowLead} delay={120}>
-            Three phases, one recycled wireframe. Keep scrolling and the diagram assembles itself —
-            sources converge, the system builds, then it ships and reports back. Built from scratch
-            on the Canvas API, no 3D library.
-          </Reveal>
-        </div>
-      </section>
       <WorkflowVisual />
     </>
   )

@@ -177,6 +177,21 @@
   color: var(--phos);
 }
 
+@media (max-width: 1120px) {
+  .clock {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .link {
+    padding: 0 10px;
+  }
+  .linkFile {
+    display: none;
+  }
+}
+
 @media (max-width: 860px) {
   .nav,
   .tools {
