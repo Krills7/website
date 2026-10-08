@@ -8,9 +8,9 @@ export const profile = {
   tagline: 'I build tools that solve real problems.',
   greeting: "Hello — I'm David.",
   elevator:
-    'Recently graduated software engineer from Arizona State University with hands-on experience in machine learning, full-stack development, and IT systems. I bridge the gap between research and production — from training AI models to managing enterprise infrastructure with Intune and Active Directory.',
+    'Recently graduated software engineer from Arizona State University with hands-on experience in machine learning, full-stack development, native Android in Kotlin, and IT systems. I bridge the gap between research and production — from training AI models to managing enterprise infrastructure with Intune and Active Directory.',
   about:
-    "I'm a freshly graduated software engineer who loves building interactive web applications, geospatial tools, and thoughtful developer tooling. I believe good software feels like a cozy, well-built home — warm, intuitive, and crafted with care.",
+    "I'm a freshly graduated software engineer who loves building interactive web applications, native Android apps with Kotlin, geospatial tools, and thoughtful developer tooling. I believe good software feels like a cozy, well-built home — warm, intuitive, and crafted with care.",
   email: 'davidbrimhall71@gmail.com',
   resume: `${import.meta.env.BASE_URL}DavidBrimhallRESUME2026.docx`,
   social: {
@@ -25,23 +25,33 @@ export const profile = {
   ],
   stats: [
     { value: '3,500+', label: 'permits mapped' },
+    { value: 'Kotlin', label: 'android + compose' },
     { value: '3 yrs', label: 'IT + infosec' },
     { value: 'ML', label: 'research → prod' },
     { value: 'PHX', label: 'arizona' },
   ],
   roles: [
     {
-      id: 'fullstack',
+      id: 'android',
       num: '01',
+      title: 'Android & Kotlin',
+      file: 'android.sys',
+      blurb:
+        'I build native Android apps with Kotlin and Jetpack Compose: MVVM with unidirectional data flow, Hilt, Retrofit, offline-friendly persistence, and unit tests around the ViewModel.',
+      proof: ['Kotlin', 'Jetpack Compose', 'Hilt', 'Retrofit', 'Coroutines', 'JUnit'],
+    },
+    {
+      id: 'fullstack',
+      num: '02',
       title: 'Full-Stack Engineer',
       file: 'front.sys',
       blurb:
-        'From database schema to pixel. I build interfaces in React and JavaScript, services in Python, Java, and C#, and I care about the seams between them.',
+        'From database schema to pixel. I build interfaces in React and JavaScript, services in Python, Java, Kotlin, and C#, and I care about the seams between them.',
       proof: ['React', 'Python', 'Java', 'C#', 'SQL', 'PostgreSQL'],
     },
     {
       id: 'ml',
-      num: '02',
+      num: '03',
       title: 'ML & Data',
       file: 'learn.sys',
       blurb:
@@ -50,7 +60,7 @@ export const profile = {
     },
     {
       id: 'ops',
-      num: '03',
+      num: '04',
       title: 'IT & Security Ops',
       file: 'ops.sys',
       blurb:
@@ -59,7 +69,7 @@ export const profile = {
     },
     {
       id: 'gis',
-      num: '04',
+      num: '05',
       title: 'Geospatial & Interactive',
       file: 'map.sys',
       blurb:
@@ -68,12 +78,30 @@ export const profile = {
     },
   ],
   stack: {
-    languages: ['Python', 'JavaScript', 'Java', 'C#', 'C++', 'SQL', 'HTML', 'CSS', 'RegEx'],
-    frameworks: ['React', 'Vite', 'ASP.NET', 'Leaflet', 'JUnit', 'Maven'],
+    languages: ['Kotlin', 'Python', 'JavaScript', 'Java', 'C#', 'C++', 'SQL', 'HTML', 'CSS', 'RegEx'],
+    android: ['Jetpack Compose', 'Material 3', 'Hilt', 'Retrofit', 'Coroutines', 'StateFlow', 'JUnit'],
+    frameworks: ['React', 'Vite', 'ASP.NET', 'Leaflet', 'Maven'],
     data: ['TensorFlow', 'Keras', 'scikit-learn', 'pandas', 'NumPy', 'Matplotlib', 'Power BI'],
     systems: ['Intune', 'Active Directory', 'ServiceNow', 'Jira', 'MS Dynamics', 'MS SysAid'],
   },
   timeline: [
+    {
+      hash: 'c0de17',
+      branch: 'android',
+      date: '2026',
+      range: '2026 — current build',
+      title: 'PostBoard',
+      role: 'portfolio Android app — Kotlin, Jetpack Compose',
+      place: 'personal project · remote',
+      desc: 'A complete Android app for browsing users and managing their posts, built end to end with modern Kotlin architecture — Compose UI, MVVM, and tests.',
+      points: [
+        'Jetpack Compose + Material 3 with light/dark themes and edge-to-edge layout',
+        'MVVM with StateFlow, Navigation Compose, and Hilt dependency injection',
+        'Retrofit against a REST API with an offline-friendly local overlay for mutations',
+        'ViewModel unit tested with fakes using JUnit and kotlinx-coroutines-test',
+      ],
+      tags: ['kotlin', 'jetpack compose', 'hilt'],
+    },
     {
       hash: 'a1f0c7',
       branch: 'ops',
@@ -145,7 +173,6 @@ export const profile = {
   projects: [
     {
       slug: 'fiber-map',
-      figure: '01',
       file: 'fiber.gis',
       title: 'Phoenix Fiber Build Map',
       tagline: 'Is fiber coming to your street?',
@@ -154,6 +181,18 @@ export const profile = {
       tags: ['JavaScript', 'Leaflet', 'GIS', 'Data Visualization'],
       link: '/fiber-map',
       cta: 'Open the map',
+      featured: true,
+    },
+    {
+      slug: 'postboard',
+      file: 'postboard.apk',
+      title: 'PostBoard',
+      tagline: 'Modern Android, start to finish.',
+      description:
+        'A complete Android app for browsing users and managing their posts: Kotlin and Jetpack Compose with Material 3, MVVM and unidirectional data flow, Hilt, Retrofit, offline-friendly local persistence, and a unit-tested ViewModel.',
+      tags: ['Kotlin', 'Jetpack Compose', 'Android', 'Hilt'],
+      link: '/postboard',
+      cta: 'Open the case study',
       featured: true,
     },
     {
@@ -170,7 +209,6 @@ export const profile = {
     },
     {
       slug: 'particle-lab',
-      figure: '03',
       file: 'particles.exe',
       title: 'Particle Lab',
       tagline: 'Small experiments, sharp tools.',
@@ -199,7 +237,7 @@ export const profile = {
       file: 'build.sys',
       title: 'Build in verifiable steps',
       body: 'I shape the data model, implement the logic, train and evaluate the model, then connect the interface to it. Small steps, each one checkable. Machine learning, full-stack apps, GIS tools — the stack changes, the loop does not: build, measure, refine.',
-      proof: ['Python', 'React', 'scikit-learn', 'PostgreSQL'],
+      proof: ['Kotlin', 'Jetpack Compose', 'Python', 'scikit-learn'],
       stage: '// phase 02 — build',
       caption: 'layers · logic · interface',
     },

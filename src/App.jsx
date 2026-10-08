@@ -8,6 +8,7 @@ const ProfilePage = lazy(() => import('./pages/ProfilePage'))
 const WorkPage = lazy(() => import('./pages/WorkPage'))
 const FiberMapPage = lazy(() => import('./pages/FiberMapPage'))
 const VisualPage = lazy(() => import('./pages/VisualPage'))
+const PostBoardPage = lazy(() => import('./pages/PostBoardPage'))
 
 function RouteFallback() {
   return (
@@ -62,6 +63,14 @@ export default function App() {
             element={
               <Suspense fallback={<RouteFallback />}>
                 <VisualPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="postboard"
+            element={
+              <Suspense fallback={<RouteFallback />}>
+                <PostBoardPage />
               </Suspense>
             }
           />

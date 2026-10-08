@@ -41,9 +41,10 @@ export default function ProfilePage() {
                 Before software, I worked tier-1 security operations and technical support QA: log
                 correlation, forensic triage, regex-based alerting, and automation in Python and
                 Bash. Then ASU, a B.S. in computer science, and a turn toward building: machine
-                learning, data visualization, and full-stack tools like the Phoenix Fiber Build
-                Map. I like the whole line — framing the problem, training the model, shipping the
-                interface, operating the result.
+                learning, data visualization, full-stack tools like the Phoenix Fiber Build Map,
+                and native Android in Kotlin — PostBoard is a complete Compose app with MVVM,
+                Hilt, Retrofit, and a tested ViewModel. I like the whole line — framing the
+                problem, training the model, shipping the interface, operating the result.
               </p>
             </Reveal>
           </div>
@@ -59,7 +60,7 @@ export default function ProfilePage() {
         <div className="shell">
           <ParticleZone id="profile-roles" kind="network" />
           <Reveal as="p" className="eyebrow">
-            01 — the four files
+            01 — the five files
           </Reveal>
           <Reveal as="h2" className={styles.sectionTitle} delay={60}>
             What I actually do
