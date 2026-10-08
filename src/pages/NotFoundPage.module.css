@@ -1,0 +1,38 @@
+.page {
+  min-height: calc(100vh - var(--header-h) - var(--status-h));
+  display: grid;
+  place-items: center;
+  padding: var(--space-2xl) var(--gutter);
+  text-align: center;
+}
+
+.inner {
+  max-width: 640px;
+}
+
+.code {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 18px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 6vw, 62px);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.body {
+  color: var(--text-dim);
+  margin-bottom: 30px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}

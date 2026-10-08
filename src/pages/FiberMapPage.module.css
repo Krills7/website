@@ -1,22 +1,35 @@
 .page {
-  flex: 1;
+  padding: clamp(46px, 7vh, 90px) 0 var(--space-xl);
+}
+
+.head {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5.6vw, 64px);
+  letter-spacing: -0.025em;
+  margin: 16px 0 16px;
+}
+
+.lead {
+  color: var(--text-dim);
+  max-width: 72ch;
+  margin-bottom: 20px;
+}
+
+.meta {
   display: flex;
-  flex-direction: column;
-  min-height: 0;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
 }
 
-.blurb {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 12px 24px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.blurb p {
-  margin: 0;
-  font-size: 13px;
-  color: var(--muted);
-  font-family: var(--font-sans);
-  line-height: 1.5;
+.meta span::before {
+  content: '▸ ';
+  color: var(--phos);
 }

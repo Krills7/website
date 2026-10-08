@@ -1,12 +1,22 @@
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.main {
+  position: relative;
+  z-index: 1;
 }
 
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
+.skipLink {
+  position: fixed;
+  top: -60px;
+  left: 16px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: var(--phos);
+  color: var(--bg-0);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: top var(--dur) var(--ease-out);
+}
+
+.skipLink:focus-visible {
+  top: 10px;
 }

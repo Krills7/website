@@ -1,0 +1,274 @@
+.hero {
+  padding: clamp(60px, 10vh, 120px) 0 var(--space-2xl);
+}
+
+.heroGrid {
+  position: relative;
+}
+
+.kicker {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--phos);
+  margin-bottom: 20px;
+}
+
+.title {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 6vw, 72px);
+  letter-spacing: -0.025em;
+  max-width: 18ch;
+  margin-bottom: 10px;
+}
+
+.titleParticles {
+  position: relative;
+  height: clamp(72px, 10vw, 132px);
+  margin-bottom: 36px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 56px);
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.introCol {
+  position: relative;
+}
+
+.introLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+
+.introCol p {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.statusLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 34px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.statusLed {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--phos);
+  box-shadow: 0 0 12px var(--phos-glow);
+  animation: led-pulse 2.4s var(--ease-in-out) infinite;
+}
+
+@keyframes led-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 44px);
+  letter-spacing: -0.02em;
+  margin: 14px 0 34px;
+}
+
+/* ── roles ──────────────────────────────────────────────────── */
+.roles {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.role {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line-soft);
+  transition: background var(--dur) var(--ease-out);
+}
+
+.role:hover {
+  background: rgba(70, 227, 154, 0.025);
+}
+
+.roleNum {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--phos);
+  opacity: 0.75;
+}
+
+.roleMain h3 {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.6vw, 30px);
+  margin-bottom: 10px;
+}
+
+.roleMain h3 em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+  margin-left: 10px;
+}
+
+.roleMain p {
+  font-size: 14px;
+  color: var(--text-dim);
+  max-width: 74ch;
+  margin-bottom: 14px;
+}
+
+.proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.proof li {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--line-strong);
+  padding: 3px 8px;
+}
+
+/* ── log ────────────────────────────────────────────────────── */
+.logHead {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-bottom: 20px;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--line);
+  margin-left: 6px;
+}
+
+.logItem {
+  position: relative;
+  padding: 22px 0 26px 26px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.logItem::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 30px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--phos);
+  background: var(--bg-0);
+  transform: rotate(45deg);
+}
+
+.logMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+.logHash {
+  color: var(--amber);
+}
+
+.logBranch {
+  color: var(--cyan);
+}
+
+.logDate {
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.logBody h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.logBody h3 em {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.logPlace {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
+
+.logBody > p {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  max-width: 72ch;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 14px 0;
+}
+
+.points li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.points li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--phos);
+  font-size: 10px;
+}
+
+/* ── workflow intro ─────────────────────────────────────────── */
+.workflowIntro {
+  padding: var(--space-3xl) 0 var(--space-2xl);
+}
+
+.workflowLead {
+  font-size: 14.5px;
+  color: var(--text-dim);
+  max-width: 72ch;
+}
+
+@media (max-width: 860px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .role {
+    grid-template-columns: 44px 1fr;
+  }
+}

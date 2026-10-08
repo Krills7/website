@@ -1,51 +1,45 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './ProjectCard.module.css'
 
-export default function ProjectCard({ title, description, tags, image, link }) {
-  const navigate = useNavigate()
+export default function ProjectCard({ project, index = 0 }) {
+  const isInternal = project.link?.startsWith('/')
+  const tags = (
+    <ul className={styles.tags}>
+      {project.tags.map((t) => (
+        <li key={t}>{t}</li>
+      ))}
+    </ul>
+  )
 
-  function handleClick() {
-    if (link.startsWith('/')) {
-      navigate(link)
-    } else {
-      window.open(link, '_blank', 'noopener noreferrer')
-    }
-  }
+  const body = (
+    <>
+      <header className={styles.head}>
+        <span className={styles.figure}>{String(index + 1).padStart(2, '0')}</span>
+        <span className={styles.file}>{project.file}</span>
+        {project.featured && <span className={styles.badge}>featured</span>}
+      </header>
+      <h3 className={styles.title}>{project.title}</h3>
+      <p className={styles.tagline}>{project.tagline}</p>
+      <p className={styles.desc}>{project.description}</p>
+      {tags}
+      <span className={styles.cta}>
+        {project.cta ?? 'Open'} <span aria-hidden="true">▸</span>
+      </span>
+    </>
+  )
 
-  return (
-    <article
-      className={styles.card}
-      onClick={handleClick}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()
-          handleClick()
-        }
-      }}
-      tabIndex={0}
-      role="button"
-      aria-label={`View project: ${title}`}
+  return isInternal ? (
+    <Link to={project.link} className={`${styles.card} ${project.featured ? styles.featured : ''}`}>
+      {body}
+    </Link>
+  ) : (
+    <a
+      href={project.link}
+      className={`${styles.card} ${project.featured ? styles.featured : ''}`}
+      target="_blank"
+      rel="noreferrer"
     >
-      <div className={styles.imageWrap}>
-        {image ? (
-          <img src={image} alt={`${title} screenshot`} className={styles.image} />
-        ) : (
-          <div className={styles.placeholder}>
-            <span className={styles.placeholderIcon}>&#x25A0;</span>
-          </div>
-        )}
-      </div>
-      <div className={styles.body}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
-        <div className={styles.tags}>
-          {tags.map((tag) => (
-            <span key={tag} className={styles.tag}>
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </article>
+      {body}
+    </a>
   )
 }
