@@ -9,6 +9,7 @@ import {
   waveTargets,
 } from '../engine/targets'
 import { useReducedMotion } from '../hooks/useReducedMotion'
+import ParticleZone from '../components/ParticleZone'
 import styles from './VisualPage.module.css'
 
 const POSES = [
@@ -154,7 +155,14 @@ export default function VisualPage() {
 
   return (
     <section className={styles.page}>
-      <div className="shell">
+      <div className={`shell ${styles.head}`}>
+        <ParticleZone
+          id="lab-title"
+          text="PARTICLES.EXE"
+          font='700 130px "Space Grotesk", monospace'
+          step={9}
+          priority={2}
+        />
         <p className="eyebrow">particles.exe — the lab</p>
         <h1 className={styles.title}>One cloud of dashes</h1>
         <p className={styles.lead}>

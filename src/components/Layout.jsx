@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import BootScreen from './BootScreen'
 import CRTOverlay from './CRTOverlay'
@@ -41,9 +41,16 @@ export default function Layout() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  // SPA route changes should start at the top of the new page.
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' })
+  // Route changes should start at the top of the new page instantly. Smooth
+  // scrolling here would animate through intermediate positions that the
+  // particle layer samples, leaving the cloud assembled in the wrong place.
+  useLayoutEffect(() => {
+    const root = document.documentElement
+    const previous = root.style.scrollBehavior
+    root.style.scrollBehavior = 'auto'
+    void root.offsetHeight // flush the style so the instant behavior applies
+    window.scrollTo(0, 0)
+    root.style.scrollBehavior = previous
   }, [location.pathname])
 
   return (

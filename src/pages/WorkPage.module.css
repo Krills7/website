@@ -2,6 +2,11 @@
   padding: clamp(56px, 9vh, 110px) 0 var(--space-2xl);
 }
 
+.head {
+  position: relative;
+  padding-bottom: 26px;
+}
+
 .title {
   font-family: var(--font-display);
   font-size: clamp(32px, 5.6vw, 64px);

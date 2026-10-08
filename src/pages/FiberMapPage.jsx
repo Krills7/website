@@ -1,4 +1,5 @@
 import FiberMapFrame from '../components/FiberMapFrame'
+import ParticleZone from '../components/ParticleZone'
 import Reveal from '../components/Reveal'
 import styles from './FiberMapPage.module.css'
 
@@ -6,6 +7,13 @@ export default function FiberMapPage() {
   return (
     <section className={styles.page}>
       <header className={`shell ${styles.head}`}>
+        <ParticleZone
+          id="fiber-title"
+          text="FIBER.GIS"
+          font='700 130px "Space Grotesk", monospace'
+          step={9}
+          priority={2}
+        />
         <Reveal as="p" className="eyebrow">
           fiber.gis — live tool
         </Reveal>
