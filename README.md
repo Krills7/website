@@ -16,7 +16,7 @@ libraries, no 3D libraries, no assets beyond fonts.
 | CRT overlay | `src/components/CRTOverlay.jsx` | Scanlines, aperture grille, vignette, raster sweep, noise, flicker. Toggle with the header button or `Shift+C`. |
 | Boot sequence | `src/components/BootScreen.jsx` | Terminal POST screen, once per session, skippable with any key. |
 | Fiber map | `public/phoenix_fiber_map_v4_standalone.html`, `src/components/FiberMapFrame.jsx` | The self-contained Leaflet tool, embedded in an isolated iframe and restyled with a terminal window frame. |
-| PostBoard assets | `public/postboard/` | Screenshots, demo video, and the debug APK for the Kotlin/Jetpack Compose Android app case study. |
+| PostBoard assets | `public/postboard-assets/` | Screenshots, demo video, and the debug APK for the Kotlin/Jetpack Compose Android app case study. |
 
 Reduce motion is respected everywhere (`prefers-reduced-motion`): the boot screen
 is skipped, the particle field renders statically, and the workflow diagram only

@@ -92,9 +92,9 @@ export default function PostBoardPage() {
       {/* ── demo ─────────────────────────────────────────────── */}
       <section className={`shell ${styles.demo}`}>
         <Reveal className={styles.phone}>
-          <video autoPlay muted loop playsInline preload="metadata" poster={`${BASE}postboard/posts_list.png`}>
-            <source src={`${BASE}postboard/demo.webm`} type="video/webm" />
-            <source src={`${BASE}postboard/demo.mp4`} type="video/mp4" />
+          <video autoPlay muted loop playsInline preload="metadata" poster={`${BASE}postboard-assets/posts_list.png`}>
+            <source src={`${BASE}postboard-assets/demo.webm`} type="video/webm" />
+            <source src={`${BASE}postboard-assets/demo.mp4`} type="video/mp4" />
           </video>
         </Reveal>
         <Reveal className={styles.demoCopy} delay={100}>

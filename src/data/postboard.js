@@ -3,7 +3,7 @@ export const postboard = {
   kicker: 'android.kotlin — case study',
   tagline:
     'Browse users, read their posts, and create, edit or delete your own — a small but complete Android app built with modern Kotlin architecture.',
-  apk: 'postboard/PostBoard-debug.apk',
+  apk: 'postboard-assets/PostBoard-debug.apk',
   github: 'https://github.com/Krills7',
   hint: 'debug build · requires Android 7.0+ (API 24) · enable “install unknown apps”',
   meta: ['Kotlin 2.2', 'Jetpack Compose', 'Material 3', 'Hilt + Retrofit', 'unit tested'],
@@ -46,10 +46,10 @@ export const postboard = {
     },
   ],
   screenshots: [
-    { src: 'postboard/users_list.png', alt: 'Users list screen', caption: 'Users' },
-    { src: 'postboard/posts_list.png', alt: 'Posts list screen', caption: 'Posts' },
-    { src: 'postboard/edit_dialog.png', alt: 'Edit post dialog', caption: 'Editing' },
-    { src: 'postboard/delete_dialog.png', alt: 'Delete confirmation dialog', caption: 'Confirming' },
+    { src: 'postboard-assets/users_list.png', alt: 'Users list screen', caption: 'Users' },
+    { src: 'postboard-assets/posts_list.png', alt: 'Posts list screen', caption: 'Posts' },
+    { src: 'postboard-assets/edit_dialog.png', alt: 'Edit post dialog', caption: 'Editing' },
+    { src: 'postboard-assets/delete_dialog.png', alt: 'Delete confirmation dialog', caption: 'Confirming' },
   ],
   tech: [
     'Kotlin',
